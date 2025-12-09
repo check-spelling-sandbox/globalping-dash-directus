@@ -185,7 +185,7 @@ describe('Sign-in hook', () => {
 	describe('auth.jwt', () => {
 		it('should not modify payload if user is not found', async () => {
 			const payload = { id: '123' };
-			const meta = { user: 'non-existent-user-id' };
+			const meta = { user: 'nonexistent-user-id' };
 
 			itemsService.readOne.resolves(undefined);
 
@@ -194,7 +194,7 @@ describe('Sign-in hook', () => {
 			const result = await callbacks.filter['auth.jwt']?.(payload, meta);
 			expect(result).to.deep.equal(payload);
 			expect(itemsService.readOne.callCount).to.equal(1);
-			expect(itemsService.readOne.args[0]).to.deep.equal([ 'non-existent-user-id' ]);
+			expect(itemsService.readOne.args[0]).to.deep.equal([ 'nonexistent-user-id' ]);
 		});
 
 		it('should not modify payload if user has no GitHub username', async () => {
