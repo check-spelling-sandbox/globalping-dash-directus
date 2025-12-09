@@ -8,8 +8,8 @@ async function createFlow () {
 		method: 'POST',
 		body: JSON.stringify({
 			id: WEBHOOK_FLOW_ID,
-			name: 'Github webhook',
-			description: 'Add Globalping credits for the Github sponsorship',
+			name: 'GitHub webhook',
+			description: 'Add Globalping credits for the GitHub sponsorship',
 			status: 'active',
 			trigger: 'webhook',
 			accountability: 'all',
@@ -80,7 +80,7 @@ export async function up () {
 	await createFlow();
 	const operation = await createOperation();
 	await assignOperationToFlow(operation.id);
-	console.log('Github webhook handler added');
+	console.log('GitHub webhook handler added');
 }
 
 export async function down () {

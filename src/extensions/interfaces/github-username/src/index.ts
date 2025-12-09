@@ -3,7 +3,7 @@ import InterfaceComponent from './interface.vue';
 
 export default defineInterface({
 	id: 'github-username',
-	name: 'Github Username',
+	name: 'GitHub Username',
 	icon: 'account_box',
 	description: 'Input with current user GitHub Username and a button to sync it.',
 	component: InterfaceComponent,
