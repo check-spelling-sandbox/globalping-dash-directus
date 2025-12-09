@@ -90,7 +90,7 @@
 			isNewTokenGenerated.value = true;
 		} catch (err: any) {
 			console.error(err);
-			alert('Unexpected error occured, please contact the administrator');
+			alert('Unexpected error occurred, please contact the administrator');
 		} finally {
 			loading.value = false;
 		}
