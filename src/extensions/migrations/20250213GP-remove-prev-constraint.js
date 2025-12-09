@@ -8,7 +8,7 @@ export async function up (knex) {
 
 	await knex.raw(`ALTER TABLE gp_credits_additions DROP FOREIGN KEY gp_credits_additions_adopted_probe_foreign`);
 
-	console.log('Removed previous constaint');
+	console.log('Removed previous constraint');
 }
 
 export async function down () {
