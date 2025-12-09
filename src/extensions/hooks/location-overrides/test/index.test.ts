@@ -90,7 +90,7 @@ describe('gp_location_overrides hook', () => {
 		});
 	});
 
-	it('should throw if city wasn\'t speified in the payload', async () => {
+	it('should throw if city wasn\'t specified in the payload', async () => {
 		hook(events, context);
 		const payload = { ip_range: '1.1.1.1/32', country: 'IT' };
 		const err = await callbacks.filter['gp_location_overrides.items.update']?.(payload, { keys: [ '1' ] }, context).catch(err => err);
