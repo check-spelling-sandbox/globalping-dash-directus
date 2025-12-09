@@ -144,7 +144,7 @@ describe('Sign-in hook', () => {
 			expect(usersService.updateOne.callCount).to.equal(0);
 		});
 
-		it('should fallback to default github token if user token is invalid', async () => {
+		it('should fall back to default github token if user token is invalid', async () => {
 			const userId = '123';
 			const githubId = '456';
 
