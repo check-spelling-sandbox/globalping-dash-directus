@@ -98,7 +98,7 @@ export const createAdoptedProbe = async (userId: string, probe: ProbeToAdopt, co
 		return await itemsService.readOne(probeByAsn.id) as AdoptedProbe;
 	}
 
-	// Probe not exists.
+	// Probe does not exist.
 	const name = await getDefaultProbeName(userId, location, context);
 	const adoption = { ...metadata, ...location, userId, name };
 	const id = await itemsService.createOne(adoption, { emitEvents: false }) as string;
