@@ -19,7 +19,7 @@ export const createAdoptedProbe = async (userId: string, probe: ProbeToAdopt, co
 
 	if (row) { existingProbe = parseRow(row); }
 
-	// Latest metadata info comes from the API, so `probe` object is preffered over `existingProbe`.
+	// Latest metadata info comes from the API, so `probe` object is preferred over `existingProbe`.
 	const metadata = {
 		lastSyncDate: new Date(),
 		ip: probe.ip,
@@ -37,7 +37,7 @@ export const createAdoptedProbe = async (userId: string, probe: ProbeToAdopt, co
 		network: probe.network,
 	};
 
-	// Latest location info comes from SQL (e.g. probe with a custom location, not synced with the API yet), so `existingProbe` is preffered.
+	// Latest location info comes from SQL (e.g. probe with a custom location, not synced with the API yet), so `existingProbe` is preferred.
 	const location = {
 		allowedCountries: existingProbe?.allowedCountries || probe.allowedCountries,
 		city: existingProbe?.city || probe.city,
